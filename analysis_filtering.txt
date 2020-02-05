@@ -1,0 +1,26 @@
+Analysis filtering
+
+remove "vs Pviento" (Potencia del viento no nos interesa"
+remove "Angulo vs" (solo 2 puntos)
+remove "Viento vs" (El viento no es realmente un parametro controlado, mas bien definido, ademas la informacion de estas graficas se encuentra en las otras que quedan"
+remove "para Viento" (Estas graficas solo tienen 2 lineas y la informacion esta contenida en las otras"
+
+Basically: Num.Aspas vs [Psalida Cp] para [Angulo] -> Curvas en Viento
+
+
+spanish
+
+Procedimiento:
+
+Se filtra a partir de la notacion del nombre de las graficas:
+
+'parametro en X' vs 'potencia en Y' para 'parametro constante', el parametro restante es el que queda en cada curva
+
+filtracion:
+
+quitar "vs Pviento" (Potencia del viento no nos interesa)
+quitar "Angulo vs" (solo tienen 2 puntos)
+quitar "Viento vs" (El viento es definido (no controlado) en condiciones reales, por lo que no es interesante tenerlo en el eje x)
+quitar "para Viento" (Estas graficas solo tienen 2 lineas (las curvas) y la informacion esta contenida en las otras)
+
+Basicamente quedan las graficas: Num.Aspas vs [Psalida Cp] para [Angulo] -> Curvas en Viento

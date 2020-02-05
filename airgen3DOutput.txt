@@ -1,0 +1,395 @@
+runfile('Y:/y/sync/current/courses/lab/p4/analysis/airgen3D.py', wdir='Y:/y/sync/current/courses/lab/p4/analysis')
+    asp  ang  res  vel   vol
+0     2   15  214    4  0.16
+1     2   15  214    5  0.22
+2     2   15  214    6  0.30
+3     2   30  214    4  0.46
+4     2   30  214    5  0.54
+5     2   30  214    6  0.64
+6     3   15  230    4  0.24
+7     3   15  230    5  0.31
+8     3   15  230    6  0.39
+9     3   30  230    4  0.54
+10    3   30  230    5  0.68
+11    3   30  230    6  0.79
+12    4   15  214    4  0.32
+13    4   15  214    5  0.45
+14    4   15  214    6  0.48
+15    4   30  214    4  0.69
+16    4   30  214    5  0.77
+17    4   30  214    6  0.85
+Power Output
+[0.00011963 0.00022617 0.00042056 0.00098879 0.00136262 0.00191402
+ 0.00025043 0.00041783 0.0006613  0.00126783 0.00201043 0.00271348
+ 0.0004785  0.00094626 0.00107664 0.00222477 0.00277056 0.00337617]
+Air Power
+[15.25524242 29.79539536 51.48644318 15.25524242 29.79539536 51.48644318
+ 15.25524242 29.79539536 51.48644318 15.25524242 29.79539536 51.48644318
+ 15.25524242 29.79539536 51.48644318 15.25524242 29.79539536 51.48644318]
+Power Coefficients
+[7.84164321e-06 7.59071063e-06 8.16837835e-06 6.48160822e-05
+ 4.57324632e-05 3.71751975e-05 1.64163096e-05 1.40231765e-05
+ 1.28442422e-05 8.31075673e-05 6.74746805e-05 5.27027717e-05
+ 3.13665729e-05 3.17586550e-05 2.09110486e-05 1.45836185e-04
+ 9.29862052e-05 6.55739262e-05]
+Complete Dataframe
+    asp  ang  res  vel   vol        op         wp        cp
+0     2   15  214    4  0.16  0.000120  15.255242  0.000008
+1     2   15  214    5  0.22  0.000226  29.795395  0.000008
+2     2   15  214    6  0.30  0.000421  51.486443  0.000008
+3     2   30  214    4  0.46  0.000989  15.255242  0.000065
+4     2   30  214    5  0.54  0.001363  29.795395  0.000046
+5     2   30  214    6  0.64  0.001914  51.486443  0.000037
+6     3   15  230    4  0.24  0.000250  15.255242  0.000016
+7     3   15  230    5  0.31  0.000418  29.795395  0.000014
+8     3   15  230    6  0.39  0.000661  51.486443  0.000013
+9     3   30  230    4  0.54  0.001268  15.255242  0.000083
+10    3   30  230    5  0.68  0.002010  29.795395  0.000067
+11    3   30  230    6  0.79  0.002713  51.486443  0.000053
+12    4   15  214    4  0.32  0.000479  15.255242  0.000031
+13    4   15  214    5  0.45  0.000946  29.795395  0.000032
+14    4   15  214    6  0.48  0.001077  51.486443  0.000021
+15    4   30  214    4  0.69  0.002225  15.255242  0.000146
+16    4   30  214    5  0.77  0.002771  29.795395  0.000093
+17    4   30  214    6  0.85  0.003376  51.486443  0.000066
+-------fig:0-------
+Hold asp:2
+X:vel
+Y:ang
+Z:op
+
+
+-------fig:1-------
+Hold asp:2
+X:vel
+Y:ang
+Z:wp
+
+
+-------fig:2-------
+Hold asp:2
+X:vel
+Y:ang
+Z:cp
+
+
+-------fig:3-------
+Hold asp:3
+X:vel
+Y:ang
+Z:op
+
+
+-------fig:4-------
+Hold asp:3
+X:vel
+Y:ang
+Z:wp
+
+
+-------fig:5-------
+Hold asp:3
+X:vel
+Y:ang
+Z:cp
+
+
+-------fig:6-------
+Hold asp:4
+X:vel
+Y:ang
+Z:op
+
+
+-------fig:7-------
+Hold asp:4
+X:vel
+Y:ang
+Z:wp
+
+
+-------fig:8-------
+Hold asp:4
+X:vel
+Y:ang
+Z:cp
+
+
+-------fig:9-------
+Hold ang:15
+X:vel
+Y:asp
+Z:op
+
+
+-------fig:10-------
+Hold ang:15
+X:vel
+Y:asp
+Z:wp
+
+
+-------fig:11-------
+Hold ang:15
+X:vel
+Y:asp
+Z:cp
+
+
+-------fig:12-------
+Hold ang:30
+X:vel
+Y:asp
+Z:op
+
+
+-------fig:13-------
+Hold ang:30
+X:vel
+Y:asp
+Z:wp
+
+
+-------fig:14-------
+Hold ang:30
+X:vel
+Y:asp
+Z:cp
+
+
+-------fig:15-------
+Hold asp:2
+X:ang
+Y:vel
+Z:op
+
+
+-------fig:16-------
+Hold asp:2
+X:ang
+Y:vel
+Z:wp
+
+
+-------fig:17-------
+Hold asp:2
+X:ang
+Y:vel
+Z:cp
+
+
+-------fig:18-------
+Hold asp:3
+X:ang
+Y:vel
+Z:op
+
+
+-------fig:19-------
+Hold asp:3
+X:ang
+Y:vel
+Z:wp
+
+
+-------fig:20-------
+Hold asp:3
+X:ang
+Y:vel
+Z:cp
+
+
+-------fig:21-------
+Hold asp:4
+X:ang
+Y:vel
+Z:op
+
+
+-------fig:22-------
+Hold asp:4
+X:ang
+Y:vel
+Z:wp
+
+
+-------fig:23-------
+Hold asp:4
+X:ang
+Y:vel
+Z:cp
+
+
+-------fig:24-------
+Hold vel:4
+X:ang
+Y:asp
+Z:op
+
+
+-------fig:25-------
+Hold vel:4
+X:ang
+Y:asp
+Z:wp
+
+
+-------fig:26-------
+Hold vel:4
+X:ang
+Y:asp
+Z:cp
+
+
+C:\Users\user\Anaconda3\lib\site-packages\matplotlib\pyplot.py:522: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  max_open_warning, RuntimeWarning)
+-------fig:27-------
+Hold vel:5
+X:ang
+Y:asp
+Z:op
+
+
+-------fig:28-------
+Hold vel:5
+X:ang
+Y:asp
+Z:wp
+
+
+-------fig:29-------
+Hold vel:5
+X:ang
+Y:asp
+Z:cp
+
+
+-------fig:30-------
+Hold vel:6
+X:ang
+Y:asp
+Z:op
+
+
+-------fig:31-------
+Hold vel:6
+X:ang
+Y:asp
+Z:wp
+
+
+-------fig:32-------
+Hold vel:6
+X:ang
+Y:asp
+Z:cp
+
+
+-------fig:33-------
+Hold ang:15
+X:asp
+Y:vel
+Z:op
+
+
+-------fig:34-------
+Hold ang:15
+X:asp
+Y:vel
+Z:wp
+
+
+-------fig:35-------
+Hold ang:15
+X:asp
+Y:vel
+Z:cp
+
+
+-------fig:36-------
+Hold ang:30
+X:asp
+Y:vel
+Z:op
+
+
+-------fig:37-------
+Hold ang:30
+X:asp
+Y:vel
+Z:wp
+
+
+-------fig:38-------
+Hold ang:30
+X:asp
+Y:vel
+Z:cp
+
+
+-------fig:39-------
+Hold vel:4
+X:asp
+Y:ang
+Z:op
+
+
+-------fig:40-------
+Hold vel:4
+X:asp
+Y:ang
+Z:wp
+
+
+-------fig:41-------
+Hold vel:4
+X:asp
+Y:ang
+Z:cp
+
+
+-------fig:42-------
+Hold vel:5
+X:asp
+Y:ang
+Z:op
+
+
+-------fig:43-------
+Hold vel:5
+X:asp
+Y:ang
+Z:wp
+
+
+-------fig:44-------
+Hold vel:5
+X:asp
+Y:ang
+Z:cp
+
+
+-------fig:45-------
+Hold vel:6
+X:asp
+Y:ang
+Z:op
+
+
+-------fig:46-------
+Hold vel:6
+X:asp
+Y:ang
+Z:wp
+
+
+-------fig:47-------
+Hold vel:6
+X:asp
+Y:ang
+Z:cp
+
+
+-------END OF FIGURES-------
+Figures:48
+Permutations:6

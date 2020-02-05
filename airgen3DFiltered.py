@@ -1,0 +1,126 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar 12 18:35:24 2019
+
+@author: user
+"""
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D as plt3
+
+
+data_url = 'data.csv'
+# read data from url as pandas dataframe
+airgen = pd.read_csv(data_url)
+
+print(airgen)
+
+#we calculate the power output
+op = airgen['vol'].values**2 / airgen['res'].values
+
+print('Power Output')
+print(op)
+
+#we calculate power input of the wind
+
+#air density at 20 deg c (average temp in medellin) in kg/m**3
+airDensity = 1.2041
+rotorRadius = 0.355 # in meters
+rotorArea = np.pi * rotorRadius**2
+wp = 0.5 * airDensity *  rotorArea * airgen['vel'].values**3 #in watts
+
+print('Air Power')
+print(wp)
+
+#Power Coefficients Cp
+cp = op / wp
+print('Power Coefficients')
+print(cp)
+
+
+#we add this data to the dataframe
+
+airgen['op'] = op*1000 #in milliWatts
+airgen['wp'] = wp
+airgen['cp'] = cp*1000000 #in micros
+
+print('Complete Dataframe')
+print(airgen)
+
+#combinatorial variables
+#num vs power -> hold gra vel
+#gra vs power -> hold num vel
+#vel vs power -> hold gra num
+
+k=0     
+i=0          
+
+
+class Parameter:
+        name=''
+        title=''
+        val =[]
+        
+        def __init__(self, name,title,val):
+            self.name = name
+            self.title = title
+            self.val = val
+            
+vel = Parameter('vel','Vviento [m/s]',[4,5,6])
+ang = Parameter('ang','Angulo [°]',[15,30])
+asp = Parameter('asp','Num.Aspas',[2,3,4])
+cp = Parameter('cp','Cp [E-6]',[])
+wp = Parameter('wp','Pviento',[])
+op = Parameter('op','Psalida [mW]',[])      
+       
+parameterList = [vel,ang,asp]
+powerList = [op,cp]
+
+# [0]=x, [1]=y, [2]=hold
+    
+#filtered analysis (no permutation)
+
+
+paramHold = ang
+paramX = asp
+paramY = vel
+for pH in paramHold.val:
+    for pq in powerList:            
+        print('-------'+'fig:'+str(k)+'-------')
+        #fig=plt.figure(fig,figsize=(13.65,10.24))
+        fig=plt.figure(k)
+        print('Hold '+ paramHold.name + ':'+str(pH))
+        print('X:' + paramX.name)
+        print('Y:' + paramY.name)
+        print('Z:' + pq.name)
+        print('\n')
+        df = airgen[(airgen[paramHold.name]==pH)]
+        
+        ax=plt3(fig)
+        ax.set_title(paramX.title + ' y ' + paramY.title +' ' + 'vs' + ' ' + pq.title + ' ' + 'para' + ' ' + paramHold.title + ':' + str(pH))
+        ax.set_xlabel(paramX.title)
+        ax.set_ylabel(paramY.title)
+        ax.set_zlabel(pq.title)
+        #use ax.scatter or ax.plot_trisurf
+        ax.plot_trisurf(df[paramX.name].values, df[paramY.name].values, df[pq.name].values)
+ 
+        k+=1
+        
+        
+print('-------END OF FIGURES-------')      
+print('Figures:'+str(k))    
+print('Permutations:'+str(i))
+print('\n')
+
+for f in range(k):
+    plt.figure(f)
+    title=plt.gca().get_title().replace(':',' ')
+    title=title.replace('Vviento [m/s]','Vviento')
+    title=title.replace('Angulo [°]','Angulo')
+    title=title.replace('Cp [E-6]','Cp')
+    title=title.replace('Psalida [mW]','Psalida')
+    plt.savefig(title+'.png')
+    print(title+' saved')
+    
